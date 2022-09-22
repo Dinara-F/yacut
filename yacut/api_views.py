@@ -1,5 +1,6 @@
 from flask import jsonify, request
 from string import ascii_letters, digits
+from http import HTTPStatus
 
 from . import app, db
 from .models import URL_map
@@ -11,9 +12,10 @@ from .error_handlers import InvalidAPIUsage
 def get_original(short_id):
     url = URL_map.query.filter_by(short=short_id).first()
     if url is None:
-        return jsonify({'message': 'Указанный id не найден'}), 404
+        return (jsonify({'message': 'Указанный id не найден'}),
+                HTTPStatus.NOT_FOUND)
     original = url.original
-    return jsonify({'url': original}), 200
+    return jsonify({'url': original}), HTTPStatus.OK
 
 
 @app.route('/api/id/', methods=['POST'])
@@ -39,4 +41,4 @@ def add_url():
     url.from_dict(data)
     db.session.add(url)
     db.session.commit()
-    return jsonify(url.to_dict()), 201
+    return jsonify(url.to_dict()), HTTPStatus.CREATED
