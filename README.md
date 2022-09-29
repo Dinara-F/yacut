@@ -10,7 +10,7 @@ Link shortening service with web interface and REST API. Its purpose is to assoc
 - [Flask-Migrate](https://flask-migrate.readthedocs.io/)
 
 ## Developer
--[Dinara Fatekhova](https://github.com/Dinara-F)
+- [Dinara Fatekhova](https://github.com/Dinara-F)
 
 ### Instructions
 
