@@ -1,4 +1,20 @@
-Клонировать репозиторий и перейти в него в командной строке:
+# YaCut
+Link shortening service with web interface and REST API. Its purpose is to associate a long user link with a short one provided by the user or generated automatically.
+
+## Technologies
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/)
+- [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/)
+- [Jinja](https://jinja.palletsprojects.com/)
+- [Flask-WTF](https://flask-wtf.readthedocs.io/)
+- [Flask-Migrate](https://flask-migrate.readthedocs.io/)
+
+## Developer
+-[Dinara Fatekhova](https://github.com/Dinara-F)
+
+### Instructions
+
+Clone the repository:
 
 ```
 git clone 
@@ -8,25 +24,25 @@ git clone
 cd yacut
 ```
 
-Cоздать и активировать виртуальное окружение:
+Create and activate virtual environment:
 
 ```
 python3 -m venv venv
 ```
 
-* Если у вас Linux/MacOS
+* Linux/MacOS
 
     ```
     source venv/bin/activate
     ```
 
-* Если у вас windows
+* Windows
 
     ```
     source venv/scripts/activate
     ```
 
-Установить зависимости из файла requirements.txt:
+Install requirements.txt:
 
 ```
 python3 -m pip install --upgrade pip
